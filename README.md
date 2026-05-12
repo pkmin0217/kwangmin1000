@@ -4,12 +4,11 @@ A clean, modern, and responsive web application that provides personalized diet 
 
 ## Features
 
-- **Personalized Recommendations:** Get tailored meal plans for breakfast, lunch, dinner, and snacks.
-- **Goal-Oriented:** Supports Weight Loss, Muscle Gain, and Maintenance goals.
-- **Dietary Preferences:** Includes options for None, Vegetarian, Vegan, and Gluten-Free diets.
-- **Dark Mode:** A toggleable dark theme for comfortable viewing in low-light environments.
-- **Responsive Design:** Optimized for both desktop and mobile devices.
-- **Persistent Settings:** Your theme preference is saved automatically.
+- **Biometric Personalization:** Input your height, weight, gender, and age for scientific calorie calculations.
+- **Smart Calorie Target:** Automatically calculates BMR and TDEE to set a target calorie intake based on your goals.
+- **Detailed Meal Plans:** Specific portion sizes and ingredients tailored to your profile.
+- **Hydration Advice:** Get recommended daily water intake based on your weight.
+- **Dark Mode:** A toggleable dark theme for comfortable viewing.
 
 ## How to Use
 

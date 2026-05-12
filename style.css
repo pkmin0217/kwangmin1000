@@ -85,6 +85,19 @@ h2 {
     color: var(--primary-color);
 }
 
+.form-row {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+@media (max-width: 600px) {
+    .form-row {
+        grid-template-columns: 1fr;
+    }
+}
+
 .form-group {
     margin-bottom: 1.5rem;
 }
@@ -95,7 +108,7 @@ label {
     font-weight: 600;
 }
 
-select {
+select, input[type="number"] {
     width: 100%;
     padding: 0.75rem;
     border-radius: 8px;
@@ -103,6 +116,13 @@ select {
     background-color: var(--card-bg);
     color: var(--text-color);
     font-size: 1rem;
+    box-sizing: border-box;
+}
+
+input[type="number"]:focus {
+    border-color: var(--primary-color);
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(76, 175, 80, 0.2);
 }
 
 button[type="submit"] {
@@ -123,6 +143,18 @@ button[type="submit"]:hover {
     background-color: var(--primary-hover);
     transform: translateY(-2px);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.metrics {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: space-between;
+    font-size: 0.95rem;
+}
+
+.metrics p {
+    margin: 0.2rem 0;
 }
 
 #diet-plan {
