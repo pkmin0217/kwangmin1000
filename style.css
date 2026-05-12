@@ -1,73 +1,140 @@
+:root {
+    --bg-color: #f4f7f6;
+    --card-bg: #ffffff;
+    --text-color: #333333;
+    --header-bg: #2e7d32; /* Healthy Green */
+    --header-text: #ffffff;
+    --primary-color: #4caf50;
+    --primary-hover: #45a049;
+    --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    --border-radius: 12px;
+    --transition: all 0.3s ease;
+}
+
+body.dark-mode {
+    --bg-color: #121212;
+    --card-bg: #1e1e1e;
+    --text-color: #e0e0e0;
+    --header-bg: #1b5e20;
+    --header-text: #ffffff;
+    --primary-color: #81c784;
+    --primary-hover: #a5d6a7;
+    --shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+}
 
 body {
-    font-family: sans-serif;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     line-height: 1.6;
     margin: 0;
     padding: 0;
-    background: #f4f4f4;
-    color: #333;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    transition: var(--transition);
 }
 
 header {
-    background: #333;
-    color: #fff;
-    padding: 1rem 0;
+    background-color: var(--header-bg);
+    color: var(--header-text);
+    padding: 1.5rem;
     text-align: center;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: var(--shadow);
 }
 
 h1 {
     margin: 0;
+    font-size: 1.5rem;
+    flex-grow: 1;
+}
+
+#theme-toggle {
+    background: none;
+    border: 2px solid var(--header-text);
+    color: var(--header-text);
+    font-size: 1.2rem;
+    cursor: pointer;
+    padding: 5px 10px;
+    border-radius: 50%;
+    transition: var(--transition);
+}
+
+#theme-toggle:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    transform: scale(1.1);
 }
 
 main {
-    padding: 1rem;
-    max-width: 800px;
+    padding: 2rem 1rem;
+    max-width: 700px;
     margin: 0 auto;
 }
 
-form {
-    background: #fff;
+form, #recommendation {
+    background-color: var(--card-bg);
     padding: 2rem;
-    border-radius: 8px;
+    border-radius: var(--border-radius);
     margin-bottom: 2rem;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    box-shadow: var(--shadow);
+    transition: var(--transition);
+}
+
+h2 {
+    margin-top: 0;
+    color: var(--primary-color);
 }
 
 .form-group {
-    margin-bottom: 1rem;
+    margin-bottom: 1.5rem;
 }
 
 label {
     display: block;
     margin-bottom: 0.5rem;
+    font-weight: 600;
 }
 
 select {
     width: 100%;
-    padding: 0.5rem;
-    border-radius: 4px;
-    border: 1px solid #ccc;
-}
-
-button {
-    display: block;
-    width: 100%;
     padding: 0.75rem;
-    border: none;
-    background: #333;
-    color: #fff;
-    border-radius: 4px;
-    cursor: pointer;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    background-color: var(--card-bg);
+    color: var(--text-color);
     font-size: 1rem;
 }
 
-button:hover {
-    background: #555;
+button[type="submit"] {
+    display: block;
+    width: 100%;
+    padding: 1rem;
+    border: none;
+    background-color: var(--primary-color);
+    color: #fff;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1.1rem;
+    font-weight: bold;
+    transition: var(--transition);
 }
 
-#recommendation {
-    background: #fff;
-    padding: 2rem;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+button[type="submit"]:hover {
+    background-color: var(--primary-hover);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+#diet-plan {
+    border-left: 4px solid var(--primary-color);
+    padding-left: 1rem;
+    margin-top: 1rem;
+}
+
+ul {
+    padding-left: 1.2rem;
+}
+
+li {
+    margin-bottom: 0.5rem;
 }

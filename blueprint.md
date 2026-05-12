@@ -18,9 +18,18 @@ This document outlines the design and development plan for a web-based health di
 *   **Typography:** Clear and readable fonts.
 *   **Interactivity:** Smooth transitions and interactive elements.
 
-## Current Plan
+## Current Status
 
 1.  **Create `blueprint.md`:** Done.
-2.  **Update `index.html`:** Create the main structure of the application.
-3.  **Update `style.css`:** Add initial styling.
-4.  **Update `main.js`:** Implement basic user interaction and data handling.
+2.  **Update `index.html`:** Done. Added theme toggle and structured layout.
+3.  **Update `style.css`:** Done. Implemented CSS variables, energetic theme, and Dark Mode.
+4.  **Update `main.js`:** Done. Refactored logic to combine goals/diets and implemented theme switching.
+5.  **Add `README.md`:** Done.
+6.  **Deploy:** Completed initial push to GitHub.
+
+## Future Roadmap
+
+*   **User Profiles:** Save dietary history.
+*   **Calorie Calculator:** Add a simple BMR/TDEE calculator.
+*   **Print Functionality:** Allow users to print their diet plan.
+
