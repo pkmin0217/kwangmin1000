@@ -71,7 +71,7 @@ main {
     margin: 0 auto;
 }
 
-form, #recommendation, #partnership {
+form, #recommendation, #partnership, #comments {
     background-color: var(--card-bg);
     padding: 2rem;
     border-radius: var(--border-radius);
