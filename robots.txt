@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://healthdiet.example.com/sitemap.xml
+Sitemap: https://kwangmin1000.pages.dev/sitemap.xml
