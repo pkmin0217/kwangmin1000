@@ -32,6 +32,11 @@ document.addEventListener('DOMContentLoaded', () => {
         const recommendation = getDetailedRecommendation(userData);
         dietPlan.innerHTML = recommendation;
         
+        // Re-initialize AddToAny for the newly added buttons
+        if (window.a2a) {
+            a2a.init('page');
+        }
+        
         document.getElementById('recommendation').scrollIntoView({ behavior: 'smooth' });
     });
 
@@ -89,6 +94,9 @@ document.addEventListener('DOMContentLoaded', () => {
             meals.dinner = meals.dinner.replace('Whole-wheat pasta', 'Brown rice pasta');
         }
 
+        const shareUrl = "https://kwangmin1000.pages.dev/";
+        const shareTitle = `I just got my personalized diet plan from Health Diet! My target is ${Math.round(targetCalories)} kcal/day. Check yours here:`;
+
         return `
             <div class="metrics">
                 <p><strong>Your Stats:</strong> ${height}cm | ${weight}kg | ${age}yrs | ${gender.charAt(0).toUpperCase() + gender.slice(1)}</p>
@@ -106,6 +114,18 @@ document.addEventListener('DOMContentLoaded', () => {
             <p style="font-size: 0.85rem; margin-top: 1.5rem; background: rgba(0,0,0,0.05); padding: 0.75rem; border-radius: 5px;">
                 <strong>Pro Tip:</strong> Try to drink at least ${Math.round(weight * 0.033 * 10) / 10} liters of water daily to stay hydrated and support your ${goal.replace('-', ' ')} journey.
             </p>
+            <div class="share-result" style="margin-top: 2rem; padding: 1.5rem; background: var(--bg-color); border-radius: 8px; text-align: center; border: 1px dashed var(--primary-color);">
+                <p style="margin-bottom: 1rem; font-weight: bold; color: var(--primary-color);">🎉 Way to go! Share your plan and inspire others!</p>
+                <div class="a2a_kit a2a_kit_size_32 a2a_default_style share-buttons" style="display: flex; justify-content: center;" data-a2a-url="${shareUrl}" data-a2a-title="${shareTitle}">
+                    <a class="a2a_dd" href="https://www.addtoany.com/share"></a>
+                    <a class="a2a_button_facebook"></a>
+                    <a class="a2a_button_mastodon"></a>
+                    <a class="a2a_button_email"></a>
+                    <a class="a2a_button_telegram"></a>
+                    <a class="a2a_button_x"></a>
+                    <a class="a2a_button_sms"></a>
+                </div>
+            </div>
         `;
     }
 });

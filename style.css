@@ -266,6 +266,24 @@ footer {
     font-size: 0.9rem;
 }
 
+/* Share Buttons */
+.share-buttons a {
+    transition: transform 0.3s ease;
+}
+
+.share-buttons a:hover {
+    transform: translateY(-3px);
+}
+
+.share-result {
+    animation: fadeIn 0.5s ease-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
 /* Ad Container */
 .ad-container {
     margin: 3rem 0;
